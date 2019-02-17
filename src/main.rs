@@ -1,5 +1,6 @@
 fn main() {
     fizzbuzz(20);
+    println!("{}", square_sum(10));
 }
 
 fn fizzbuzz(n: usize) {
@@ -14,4 +15,12 @@ fn fizzbuzz(n: usize) {
             println!("{}", i);
         }
     }
+}
+
+fn square_sum(n: isize) -> isize {
+    (0..n)
+        .filter(|i| i % 2 == 0)
+        .map(|i| i * i)
+        .sum()
+//    return は不要
 }
