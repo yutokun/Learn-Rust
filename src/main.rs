@@ -28,10 +28,12 @@ fn square_sum(n: isize) -> isize {
 }
 
 fn variable_binding() {
-	let x = 1 + 2; // immutable by default
+	// immutable by default
+	let x = 1 + 2;
 	println!("{}", x);
 
-	let mut m = 1 + 2; // mutable pattern
+	// mutable pattern
+	let mut m = 1 + 2;
 	println!("{}", m + 2);
 }
 
