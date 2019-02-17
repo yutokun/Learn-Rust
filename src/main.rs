@@ -2,6 +2,7 @@ fn main() {
 //	fizzbuzz(20);
 //	println!("{}", square_sum(10));
 	variable_binding();
+	string_types();
 }
 
 fn fizzbuzz(n: usize) {
@@ -34,4 +35,19 @@ fn variable_binding() {
 	println!("{}", m + 2);
 }
 
-fn string_types() {}
+fn string_types() {
+	// "abc" is &str but could cast as String.
+	let mut a: String = "abc".to_string();
+
+	// String + &str
+	a += "def";
+	println!("{}", a);
+
+	// Other types have to_string()
+	let x = 1.0.to_string();
+
+	// String + String is not allowed.
+	// So first cast as &str.
+	a += x.as_str();
+	println!("{}", a);
+}
