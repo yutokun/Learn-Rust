@@ -3,7 +3,10 @@ fn main() {
 //	println!("{}", square_sum(10));
 //	variable_binding();
 //	string_types();
-	tuple();
+//	tuple();
+	println!("{}", first_class_add(4, 6));
+	let f = first_class_add;
+	println!("{}", f(3, 4));
 }
 
 fn fizzbuzz(n: usize) {
@@ -25,7 +28,7 @@ fn square_sum(n: isize) -> isize {
 		.filter(|i| i % 2 == 0)
 		.map(|i| i * i)
 		.sum()
-//	return は不要;
+//	return も ; も不要
 }
 
 fn variable_binding() {
@@ -58,4 +61,8 @@ fn string_types() {
 fn tuple() {
 	let a = (1, 1.5, "abc");
 	println!("{} - {} - {}", a.0, a.1, a.2);
+}
+
+fn first_class_add(x: isize, y: isize) -> isize {
+	x + y
 }
