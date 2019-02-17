@@ -1,8 +1,9 @@
 fn main() {
 //	fizzbuzz(20);
 //	println!("{}", square_sum(10));
-	variable_binding();
-	string_types();
+//	variable_binding();
+//	string_types();
+	tuple();
 }
 
 fn fizzbuzz(n: usize) {
@@ -52,4 +53,9 @@ fn string_types() {
 	// So first cast as &str.
 	a += x.as_str();
 	println!("{}", a);
+}
+
+fn tuple() {
+	let a = (1, 1.5, "abc");
+	println!("{} - {} - {}", a.0, a.1, a.2);
 }
