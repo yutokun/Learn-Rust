@@ -1,6 +1,7 @@
 fn main() {
-    fizzbuzz(20);
-    println!("{}", square_sum(10));
+//    fizzbuzz(20);
+//    println!("{}", square_sum(10));
+    variable_binding();
 }
 
 fn fizzbuzz(n: usize) {
@@ -23,4 +24,12 @@ fn square_sum(n: isize) -> isize {
         .map(|i| i * i)
         .sum()
 //    return は不要
+}
+
+fn variable_binding() {
+    let x = 1 + 2; // immutable by default
+    println!("{}", x);
+
+    let mut m = 1 + 2; // mutable pattern
+    println!("{}", m + 2);
 }
